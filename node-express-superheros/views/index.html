@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+
+    <h1>{{ title }}</h1>
+
+    <br>
+
+    <form class="form-inline">
+      <div class="form-group">
+        <label>Superhero name</label>
+        <input type="text" id="superhero-name" name="name" class="form-control" required>
+        <label>Superhero ability</label>
+        <input type="text" id="superhero-ability" name="ability" class="form-control" required>
+        <label>Superhero nemesis</label>
+        <input type="text" id="superhero-nemesis" name="nemesis" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-default">Save</button>
+    </form>
+
+    <hr><br>
+
+    <div id="results"></div>
+
+    <div id="super-hero-table">
+
+      <h2>All Superheros</h2>
+
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Ability</th>
+              <th>Nemesis</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody id="all">
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+
+  <form id="edit-form">
+    <h2>Edit Superhero</h2>
+    <div class="form-group">
+      <input type="text" class="form-control" id="edit-name">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="edit-ability">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="edit-nemesis">
+    </div>
+    <button type="submit" class="btn btn-primary update-button">Update</button>
+    <button class="btn btn-success" id="cancel-edit">Cancel</button>
+  </form>
+
+  </div>
+
+{% endblock %}
